@@ -6,6 +6,10 @@ type Queue struct {
 	items []string
 }
 
+func New() *Queue {
+	return &Queue{items: make([]string, 0)}
+}
+
 func (q *Queue) Enqueue(i string) {
 	q.items = append(q.items, i)
 }
